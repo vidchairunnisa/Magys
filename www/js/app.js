@@ -116,42 +116,9 @@ app.controller('panelCtrl',function($scope){
 
 });
 
-app.controller("hometesCtrl", [ '$scope', function($scope) {
-
-     angular.extend($scope, {
-                center: {
-                    lat: 39,
-                    lng: -100,
-                    zoom: 4
-                },
-                layers: {
-                    baselayers: {
-                        xyz: {
-                            name: 'OpenStreetMap (XYZ)',
-                            url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                            type: 'xyz'
-                        }
-                    },
-                    overlays: {
-                        wms: {
-                            name: 'EEUU States (WMS)',
-                            type: 'wms',
-                            visible: true,
-                            url: 'http://suite.opengeo.org/geoserver/usa/wms',
-                            layerParams: {
-                                layers: 'usa:states',
-                                format: 'image/png',
-                                transparent: true
-                            }
-                        }
-                    }
-                }
-            });
-}]);
-
 app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ionicModal', function($scope, $http, leafletData, $filter, $ionicModal) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -548,7 +515,7 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
 
 app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -755,7 +722,7 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
 app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -929,7 +896,7 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
 app.controller("analisis-tigaCtrl", [ '$scope', '$http', 'leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -1044,7 +1011,7 @@ app.controller("analisis-tigaCtrl", [ '$scope', '$http', 'leafletData', function
 
 app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -1161,7 +1128,7 @@ app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', functio
 
 app.controller("analisis-limaCtrl", [ '$scope', '$http', 'leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -1270,7 +1237,7 @@ app.controller("analisis-limaCtrl", [ '$scope', '$http', 'leafletData', function
 
 app.controller("analisis-enamCtrl", [ '$scope', function($scope) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -1350,7 +1317,7 @@ app.controller("analisis-enamCtrl", [ '$scope', function($scope) {
 
 app.controller("analisis-tujuhCtrl", [ '$scope', '$http', 'leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -1470,7 +1437,7 @@ app.controller("analisis-tujuhCtrl", [ '$scope', '$http', 'leafletData', functio
 
 app.controller("analisis-delapanCtrl", [ '$scope', '$http', 'leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
@@ -1586,7 +1553,7 @@ app.controller("analisis-delapanCtrl", [ '$scope', '$http', 'leafletData', funct
 
 app.controller("analisis-sembilanCtrl", [ '$scope', '$http', 'leafletData', function($scope, $http, leafletData) {
 
-  var host = "http://localhost:8080/cgi-bin/mapserv.exe?";
+  var host = "http://192.168.173.1:8080/cgi-bin/mapserv.exe?";
   var mapfile = "map=C:\\ms4w\\apps\\indekosjaksel\\magys.map&";
   var wms_server = host + mapfile;
 
