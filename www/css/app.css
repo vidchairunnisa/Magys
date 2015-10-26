@@ -163,11 +163,6 @@ html, body {
 	background-color: #dbdbdb;
 	padding:0px !important;
 }
-.kard a:hover{
-	background-color:#f8f8f8;
-	border-color:#d9d9d9;
-	border-radius:5px;
-}
 
 .teks-kard{
 	text-align:justify;
@@ -208,8 +203,8 @@ html, body {
 	margin:10px 0;
 	font-size:14px;
 	background-color: #dbdbdb; 
-	border-top-color:#666666; 
-	border-bottom-color:#666666;
+	/*border-top-color:#666666; 
+	border-bottom-color:#666666;*/
 }
 
 .detail_teks_alias{
