@@ -1,0 +1,164 @@
+<ion-view>
+
+<ion-nav-bar class="navbar" align-title="center">
+	<ion-nav-buttons side="left">
+		<button class="button-clear" ng-click="toggleLeft()">
+			<i class="ion-navicon-round icon-header naviconheader"></i>
+		</button>
+	</ion-nav-buttons>
+
+	<ion-nav-title class="navtitle">Rent Room Map</ion-nav-title>
+
+</ion-nav-bar>
+
+<ion-content data-tap-disabled="true">
+<!-- {{ geojson }} -->
+
+<!-- <div ng-repeat="jsonku in geojson.data.features | filter:'Rasuna Icon'"> {{ jsonku.properties.No }} </div> -->
+	
+	<leaflet lf-center="center" legend="legend" id="map" layers="layers" geojson="geojson" width="100%" height="400px">
+		
+	</leaflet>
+
+	<a class="button button-stable button-small btn-filter" ng-click='openModalku()'>
+ 		 Filter
+	</a>
+
+	
+</ion-content>
+	<div ng-if="hasilFilter.length>0">
+    	<a class="button button-balanced button-block button-small" style="position:fixed;bottom:40px;width:100%" ng-click='openDetailku()'>{{hasilFilter.length}} Rent Room Found</a>
+    </div>
+
+    <div ng-if="hasilFilter.length==0">
+    	<a class="button button-dark button-block button-small" style="position:fixed;bottom:40px;width:100%">No Rent Room Found</a>
+    </div>
+
+    <!-- <div ng-if="hasilFilter.length>0">
+    	<a class="button button-balanced button-block button-small icon icon-right ion-chevron-right" style="position:fixed;bottom:40px;width:100%" href="#/info-details/">{{hasilFilter.length}} Rent Room Found</a>
+    </div> -->
+
+<ion-tabs class="tabs-stable tabs-icon-top">
+
+  <ion-tab title="Find Rent Room" icon-on="ion-ios-search-strong" icon-off="ion-ios-search">
+   
+  </ion-tab>
+
+<ion-tab title="Choose Query Rent Room" icon-on="ion-ios-analytics" icon-off="ion-ios-analytics-outline" href="#/query-analisis/">
+
+  </ion-tab>
+ 
+</ion-tabs>
+
+
+</ion-view>
+
+<script type="text/ng-template" id='modal-detail.html'>
+	
+	<ion-modal-view>
+
+		<form>
+
+			<ion-header-bar class="navbar">
+                <h3 class="title" style="font-weight: bold">Info Details</h3>
+        	</ion-header-bar>
+
+			<ion-content>
+
+				<div class="item list card detail_list" ng-repeat="hasilFilt in hasilFilter | orderBy: 'alias'">
+   			
+	    			<div class="item-text-wrap detail_teks_alias"><b>{{hasilFilt.properties.alias}}</b></div>
+	    			<div class="item-text-wrap detail_teks"><b>Price : </b>{{hasilFilt.properties.hargalabel}}</div>
+	    			<div class="item item-text-wrap detail_item"><b>Facilities : </b>{{hasilFilt.properties.fasilitas}}</div>
+	    			<div class="item-text-wrap detail_teks"><b>Add Info : </b>{{hasilFilt.properties.infolain}}</div>
+	    			<div class="item item-text-wrap detail_item"><b>Address : </b>{{hasilFilt.properties.alamat}}</div>
+	    			<div class="item-text-wrap detail_teks"><b>Contact 1 : </b>{{hasilFilt.properties.kontak}}</div>
+	    			<div class="item-text-wrap detail_teks"><b>Contact 2 : </b>{{hasilFilt.properties.kontaklain}}</div>
+					
+				</div>	
+
+				<div class="padding">
+					<button ng-click="closeDetailKu()" class="button button-block button-balanced">Back to Map</button>
+	            </div>
+	            <div class="padding"></div>
+
+			</ion-content>
+
+		</form>
+
+	</ion-modal-view>
+
+</script>
+
+<script type="text/ng-template" id='modal-filter.html'>
+	
+	<ion-modal-view>
+
+		<form>
+
+			<ion-header-bar class="navbar" style="position:fixed">
+                <h3 class="title" style="font-weight: bold">Find Rent Room</h3>
+        	</ion-header-bar>
+
+			<ion-content data-tap-disabled="true">
+
+				<div class="padding">
+
+					<label class="item item-input item-select">
+					    <div class="input-label teks-filter">
+					      Price
+					    </div>
+					    <select ng-model="testku.harga">
+					      <option value='1' selected>Under 1 Million</option>
+					      <option value='2'>Between 1-5 Million</option>
+					      <option value='3'>Above 5 Million</option>
+					      <option value='0'>No Price Info Available</option>
+					    </select>
+				  	</label>
+
+					<label class="item item-input item-select">
+					    <div class="input-label teks-filter">
+					      Distance
+					    </div>
+					    <select ng-model="testku.jarak">
+					    	<option value='1' selected>Under 2KM</option>
+							<option value='2'>Between 2KM-5KM</option>
+							<option value='3'>Above 5KM</option>
+					    </select>
+				  	</label>
+				  	
+				  	<label class="item item-input teks-filter">Facilities</label>
+					  
+				 	<ul>
+					   <li class="item item-checkbox">
+					     <label class="checkbox">
+					      <input type="checkbox" ng-true-value="'YAC'" ng-false-value="'NAC'" ng-model="testku.name">
+					     </label>
+					     <font class="teks-filter">AC</font>
+					    </li>
+					    <li class="item item-checkbox">
+					     <label class="checkbox">
+					       <input type="checkbox" ng-true-value="'YWF'" ng-false-value="'NWF'" ng-model="testku.koneksi">
+					     </label>
+					     <font class="teks-filter">Wifi</font>
+					    </li>
+					    <li class="item item-checkbox">
+					     <label class="checkbox">
+					       <input type="checkbox" ng-true-value="'YDPR'" ng-false-value="'NDPR'" ng-model="testku.dapur">
+					     </label>
+					     <font class="teks-filter">Dapur</font>
+					    </li>
+					    
+				  	</ul>	
+				</div>
+
+				<div class="padding">
+	           		<button ng-click="filterku(testku)" class="button button-block button-balanced">Find</button>
+	            	<button ng-click="closeModalKu()" class="button button-block button-dark">Close</button>
+	            </div>
+
+			</ion-content>
+		</form>
+	</ion-modal-view>
+
+</script>
