@@ -297,7 +297,7 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
                     onEachFeature: function(feature, layer) {
 
                         layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
-                            '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabell+
+                            '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
                             '</td></tr><tr><th scope="row" width="30"><b>FACILITIES</b></th><th width="8">:</th><td>' + feature.properties.fasilitas +
                             '</td></tr><tr><th scope="row" width="30"><b>ADD-INFORMATION</b></th><th width="8">:</th><td>' + feature.properties.infolain +
                             '</td></tr><tr><th scope="row" width="30"><b>ADDRESS</b></th><th width="8">:</th><td>' + feature.properties.alamat +
