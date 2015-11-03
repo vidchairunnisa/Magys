@@ -32,7 +32,7 @@
         permission on your app, which PhoneGap requires.
     -->
     <preference name="permissions"                value="none"/>
-     <preference name="windows-target-version" value="8.1" />
+     <preference name="windows-phone-target-version" value="8.1" />
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="3.6.3" />          <!-- all: current version of PhoneGap -->
