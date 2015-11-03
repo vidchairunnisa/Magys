@@ -60,7 +60,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     
     <!-- Define app icon for each platform. -->
-     <icon src="magys.png" />
+     <icon src="icon.png" />
     <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="www/res/icon/android/magys-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="www/res/icon/android/magys-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
@@ -108,5 +108,9 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <platform name="wp8">
+        <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
+        <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
+  </platform> 
 
 </widget>
