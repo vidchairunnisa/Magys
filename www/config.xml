@@ -108,7 +108,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <platform name="wp8">
+    <platform name="windows">
         <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
         <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
   </platform> 
