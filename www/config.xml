@@ -32,7 +32,7 @@
         permission on your app, which PhoneGap requires.
     -->
     <preference name="permissions"                value="none"/>
-     <preference name="windows-phone-target-version" value="8.1" />
+    <preference name="windows-phone-target-version" value="8.1" />
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="3.7.0" />          <!-- all: current version of PhoneGap -->
@@ -64,7 +64,7 @@
     <platform name="wp8">
         <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
         <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
-        <splash src="www/res/screen/windows-phone/screen-portrait.jpg" />
+        <splash src="www/res/screen/windows-phone/screen-portrait.jpg" width="173" height="173"/>
     </platform> 
     <icon src="icon.png" />
     <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
