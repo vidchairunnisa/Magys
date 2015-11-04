@@ -62,7 +62,7 @@
     <platform name="wp8">
         <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
         <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
-        <splash src="www/res/screen/windows-phone/SplashScreenImage.jpg" width="173" height="173"/>
+        <splash src="www/res/screen/windows-phone/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform> 
     <icon src="icon.png" />
     <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
