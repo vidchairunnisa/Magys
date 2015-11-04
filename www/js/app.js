@@ -1330,7 +1330,7 @@ app.controller("analisis-tujuhCtrl", [ '$scope', '$http', 'leafletData', functio
                 legend: {
                     position: 'bottomleft',
                     colors: [ '#000000', '#ffffff','#d95f0e', '#fec44f', '#fff7bc' ],
-                    labels: [ 'Amount of Rent Room with Kitchen,', 'Tap on The Square for Details<br/><br/>', '4 - 9 Rent Room', '2 - 3 Rent Room', '0 - 1 Rent Room' ],
+                    labels: [ 'Amount of Rent Room with Kitchen,', 'Tap on The Symbol for Details<br/><br/>', '4 - 9 Rent Room', '2 - 3 Rent Room', '0 - 1 Rent Room' ],
                 },
                 layers: {
                     overlays: {
@@ -1450,7 +1450,7 @@ app.controller("analisis-delapanCtrl", [ '$scope', '$http', 'leafletData', funct
                 legend: {
                     position: 'bottomleft',
                     colors: [ '#000000', '#ffffff', '#d73027', '#fc8d59', '#fee090' ],
-                    labels: [ 'Amount of Rent Room with Wifi,', 'Tap on The Square for Details<br/><br/>', '4 - 5 Rent Room', '2 - 3 Rent Room', '0 - 1 Rent Room' ],
+                    labels: [ 'Amount of Rent Room with Wifi,', 'Tap on The Symbol for Details<br/><br/>', '4 - 5 Rent Room', '2 - 3 Rent Room', '0 - 1 Rent Room' ],
                 },
                 layers: {
                     overlays: {
@@ -1566,7 +1566,7 @@ app.controller("analisis-sembilanCtrl", [ '$scope', '$http', 'leafletData', func
                 legend: {
                     position: 'bottomleft',
                     colors: [  '#000000','#ffffff','#2c7fb8', '#7fcdbb', '#edf8b1' ],
-                    labels: [ 'Amount of Rent Room with AC,', 'Tap on The Square for Details<br/><br/>','5 - 6 Rent Room', '3 - 4 Rent Room', '0 - 2 Rent Room' ],
+                    labels: [ 'Amount of Rent Room with AC,', 'Tap on The Symbol for Details<br/><br/>','5 - 6 Rent Room', '3 - 4 Rent Room', '0 - 2 Rent Room' ],
                 },
                 layers: {
                     overlays: {
