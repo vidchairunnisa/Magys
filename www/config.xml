@@ -64,7 +64,7 @@
     <platform name="wp8">
         <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
         <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
-        <splash src="www/res/screen/windows-phone/screen-portrait.jpg" width="173" height="173"/>
+        <splash src="www/res/screen/windows-phone/SplashScreenImage.jpg" width="173" height="173"/>
     </platform> 
     <icon src="icon.png" />
     <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
@@ -80,7 +80,7 @@
     <icon src="www/res/icon/windows-phone/icon-96.png" gap:platform="winphone"   gap:role="background" /> -->
     
     <!-- Define app splash screen for each platform. -->
-     <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
     <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="www/res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
     <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
