@@ -35,7 +35,7 @@
     <preference name="windows-phone-target-version" value="8.1" />
 
     <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version"           value="3.2.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="3.7.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />       <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
@@ -78,10 +78,22 @@
     <icon src="www/res/icon/windows-phone/icon-96.png" gap:platform="winphone"   gap:role="background" /> -->
     
     <!-- Define app splash screen for each platform. -->
-    <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <!-- <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
     <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="www/res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+    <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" /> -->
+    <platform name="android">
+    <!-- you can use any density that exists in the Android project -->
+        <splash src="www/res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="www/res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="www/res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="www/res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
+
+        <splash src="www/res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="www/res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="www/res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="www/res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     <gap:splash src="www/res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
     <gap:splash src="www/res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
     <gap:splash src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
