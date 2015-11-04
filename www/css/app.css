@@ -176,6 +176,7 @@ html, body {
 
 #kard_item a:hover {
 	background-color: #dbdbdb;
+	color: #dbdbdb;
 }
 
 .detail_list {
