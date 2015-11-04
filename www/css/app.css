@@ -170,11 +170,11 @@ html, body {
 	font-size:14px;
 }
 
-.kard_item{
+/*.kard_item{
 	background-color: #dbdbdb; 
-	/*border-top-color:#666666; */
-	/*border-bottom-color:#666666;*/
-}
+	border-top-color:#666666; 
+	/*border-bottom-color:#666666;
+}*/
 
 .detail_list {
 	padding:0px !important;
