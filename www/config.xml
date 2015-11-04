@@ -47,7 +47,8 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-    
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="7000" />
 
     <!-- Plugins can also be added here. -->
     <!--
@@ -60,7 +61,11 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     
     <!-- Define app icon for each platform. -->
-     <icon src="icon.png" />
+    <platform name="wp8">
+        <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
+        <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
+    </platform> 
+    <icon src="icon.png" />
     <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="www/res/icon/android/magys-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="www/res/icon/android/magys-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
@@ -70,8 +75,8 @@
     <icon src="www/res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
     <icon src="www/res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
     <icon src="www/res/icon/webos/icon-64.png"          gap:platform="webos" />
-    <icon src="www/res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
-    <icon src="www/res/icon/windows-phone/icon-96.png" gap:platform="winphone"   gap:role="background" />
+    <!-- <icon src="www/res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
+    <icon src="www/res/icon/windows-phone/icon-96.png" gap:platform="winphone"   gap:role="background" /> -->
     
     <!-- Define app splash screen for each platform. -->
      <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
@@ -108,9 +113,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <platform name="windows">
-        <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
-        <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
-  </platform> 
+    
 
 </widget>
