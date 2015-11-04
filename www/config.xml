@@ -64,6 +64,7 @@
     <platform name="wp8">
         <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
         <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
+        <splash src="www/res/screen/windows-phone/screen-portrait.jpg" />
     </platform> 
     <icon src="icon.png" />
     <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
@@ -88,7 +89,7 @@
     <gap:splash src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
     <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
-    <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
+    <!-- <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" /> -->
     
      <gap:config-file platform="ios" parent="LSMinimumSystemVersion">
         <string>7.0</string>
