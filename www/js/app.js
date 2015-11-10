@@ -650,7 +650,7 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -680,7 +680,7 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -710,7 +710,7 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -794,7 +794,7 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
                                     layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                         '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                         '</td></tr></table>');
                                 } 
                             }
@@ -824,7 +824,7 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -854,7 +854,7 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -884,7 +884,7 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -968,7 +968,7 @@ app.controller("analisis-tigaCtrl", [ '$scope', '$http', 'leafletData', function
                                     layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                         '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
                                         '</td></tr><tr><th scope="row" width="30"><b>FACILITIES</b></th><th width="8">:</th><td>' + feature.properties.fasilitas +
-                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                         '</td></tr></table>');
                                 } 
                             }
@@ -999,7 +999,7 @@ app.controller("analisis-tigaCtrl", [ '$scope', '$http', 'leafletData', function
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
                                 '</td></tr><tr><th scope="row" width="30"><b>FACILITIES</b></th><th width="8">:</th><td>' + feature.properties.fasilitas +
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -1084,7 +1084,7 @@ app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', functio
                                         '</td></tr><tr><th scope="row" width="30"><b>TYPE</b></th><th width="8">:</th><td>' + feature.properties.kos + 
                                         '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
                                         '</td></tr><tr><th scope="row" width="30"><b>FACILITIES</b></th><th width="8">:</th><td>' + feature.properties.fasilitas +
-                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                         '</td></tr></table>');
                                 } 
                             }
@@ -1116,7 +1116,7 @@ app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', functio
                                 '</td></tr><tr><th scope="row" width="30"><b>TYPE</b></th><th width="8">:</th><td>' + feature.properties.kos +
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
                                 '</td></tr><tr><th scope="row" width="30"><b>FACILITIES</b></th><th width="8">:</th><td>' + feature.properties.fasilitas +
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                 '</td></tr></table>');
                         } 
                     }
@@ -1225,7 +1225,7 @@ app.controller("analisis-limaCtrl", [ '$scope', '$http', 'leafletData', function
 
                                     layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias +
                                         '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                        '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
                                         '</td></tr></table>');
                                 } 
                             }
