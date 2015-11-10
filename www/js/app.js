@@ -620,7 +620,7 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
-                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist + ' KM' +
+                                '</td></tr><tr><th scope="row" width="30"><b>DISTANCE FROM UB</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2)+ ' KM' +
                                 '</td></tr></table>');
                         } 
                     }

@@ -27,11 +27,11 @@
 	
 </ion-content>
 	<div ng-if="hasilFilter.length>0">
-    	<a class="button button-balanced button-block button-small" style="position:fixed;bottom:40px;width:100%" ng-click='openDetailku()'>{{hasilFilter.length}} Rent Room Found</a>
+    	<a class="button button-balanced button-block button-small" style="position:fixed;bottom:40px;width:100%" ng-click='openDetailku()'><b>{{hasilFilter.length}} Rent Room Found <b/>(Click for Details Information)</a>
     </div>
 
     <div ng-if="hasilFilter.length==0">
-    	<a class="button button-dark button-block button-small" style="position:fixed;bottom:40px;width:100%">No Rent Room Found</a>
+    	<a class="button button-dark button-block button-small" style="position:fixed;bottom:40px;width:100%"><b>No Rent Room Found<b/></a>
     </div>
 
     <!-- <div ng-if="hasilFilter.length>0">
@@ -69,6 +69,7 @@
    			
 	    			<div class="item-text-wrap detail_teks_alias"><b>{{hasilFilt.properties.alias}}</b></div>
 	    			<div class="item-text-wrap detail_teks"><b>Price &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : </b>{{hasilFilt.properties.hargalabel}}</div>
+	    			<div class="item-text-wrap detail_teks"><b>Distance : </B>{{hasilFilt.properties.hubdist.toFixed(2)}} KM</div>
 	    			<div class="item item-text-wrap detail_item"><b>Facilities : </b>{{hasilFilt.properties.fasilitas}}</div>
 	    			<div class="item-text-wrap detail_teks"><b>Add Info : </b>{{hasilFilt.properties.infolain}}</div>
 	    			<div class="item item-text-wrap detail_item"><b>Address : </b>{{hasilFilt.properties.alamat}}</div>
