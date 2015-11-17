@@ -107,10 +107,11 @@
     
     <gap:config-file platform="ios" parent="CFBundleVersion"><string>0.2.1</string></gap:config-file>
 
-    <access origin="*"/> <!-- allow local pages -->
+    <!-- allow local pages -->
     <access origin="*.pushwoosh.com"/>
 
     <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*"/> 
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
