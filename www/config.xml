@@ -110,7 +110,7 @@
     <!-- allow local pages -->
     <access origin="*.pushwoosh.com"/>
 
-    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
     <access origin="*"/> 
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
