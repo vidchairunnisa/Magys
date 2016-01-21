@@ -47,7 +47,8 @@
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="android-minSdkVersion"      value="10" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-   
+    <preference name="SplashScreen"               value="Screen" />
+    <preference name="SplashScreenDelay"          value="10000" />
     <!-- Plugins can also be added here. -->
     <!--
         <gap:plugin name="Example" />
@@ -60,9 +61,9 @@
     
     <!-- Define app icon for each platform. -->
     <platform name="wp8">
-        <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
-        <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
-        <splash src="www/res/screen/windows-phone/SplashScreenImage.jpg" />
+        <icon src="www/res/icon/windows-phone/icon-48.png" width="99" height="99"/>
+        <icon src="www/res/icon/windows-phone/icon-72.png" width="159" height="159"/>
+        <splash src="www/res/screen/windows-phone/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform> 
     
     <!-- <icon src="www/res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
