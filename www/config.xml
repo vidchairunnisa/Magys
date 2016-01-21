@@ -62,18 +62,9 @@
     <platform name="wp8">
         <icon src="www/res/icon/windows-phone/icon-96.png" width="62" height="62" />
         <icon src="www/res/icon/windows-phone/icon-96.png" width="173" height="173" />
-        <splash src="www/res/screen/windows-phone/SplashScreenImage.jpg" width="768" height="1280"/>
+        <splash src="www/res/screen/windows-phone/SplashScreenImage.jpg" />
     </platform> 
-    <icon src="icon.png" />
-    <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
-    <icon src="www/res/icon/android/magys-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
-    <icon src="www/res/icon/android/magys-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
-    <icon src="www/res/icon/android/magys-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
-    <icon src="www/res/icon/ios/magys-48.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="www/res/icon/ios/magys-72.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="www/res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="www/res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
-    <icon src="www/res/icon/webos/icon-64.png"          gap:platform="webos" />
+    
     <!-- <icon src="www/res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="www/res/icon/windows-phone/icon-96.png" gap:platform="winphone"   gap:role="background" /> -->
     
@@ -84,21 +75,24 @@
     <gap:splash src="www/res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" /> -->
     <platform name="android">
     <!-- you can use any density that exists in the Android project -->
-        <splash src="www/res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
-        <splash src="www/res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
-        <splash src="www/res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
-        <splash src="www/res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
 
-        <splash src="www/res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
-        <splash src="www/res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
-        <splash src="www/res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-        <splash src="www/res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <!-- <icon src="icon.png" /> -->
+        <icon src="www/res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
+        <icon src="www/res/icon/android/magys-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+        <icon src="www/res/icon/android/magys-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
+        <icon src="www/res/icon/android/magys-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+       
+        <splash src="www/res/screen/android/splash-land-hdpi.png" gap:qualifier="land-hdpi"/>
+        <splash src="www/res/screen/android/splash-land-ldpi.png" gap:qualifier="land-ldpi"/>
+        <splash src="www/res/screen/android/splash-land-mdpi.png" gap:qualifier="land-mdpi"/>
+        <splash src="www/res/screen/android/splash-land-xhdpi.png" gap:qualifier="land-xhdpi"/>
+
+        <splash src="www/res/screen/android/splash-port-hdpi.png" gap:qualifier="port-hdpi"/>
+        <splash src="www/res/screen/android/splash-port-ldpi.png" gap:qualifier="port-ldpi"/>
+        <splash src="www/res/screen/android/splash-port-mdpi.png" gap:qualifier="port-mdpi"/>
+        <splash src="www/res/screen/android/splash-port-xhdpi.png" gap:qualifier="port-xhdpi"/>
     </platform>
-    <gap:splash src="www/res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="www/res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
-    <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
+    
     <!-- <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" /> -->
     
      <gap:config-file platform="ios" parent="LSMinimumSystemVersion">
