@@ -114,7 +114,7 @@ app.run(function($rootScope,$ionicNavBarDelegate,$ionicSideMenuDelegate,$ionicPo
 
 app.controller('panelCtrl',function($scope){
 
-});
+});  
 
 app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ionicModal', function($scope, $http, leafletData, $filter, $ionicModal) {
 
@@ -129,7 +129,7 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
     harga : '1',
     jarak :'1'
   };
-
+ 
   $scope.rangeKu = {};
   $scope.rangeJarakKu = {};
   $scope.hasilFilter = 0;
@@ -204,7 +204,7 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
                             }
                         },
 
-                        rr: {
+                       rr: {
                             name: 'Residential Road',
                             url: wms_server,
                             type: 'wms',
@@ -658,7 +658,7 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
         });
 
-    $http.get("data/anls1-ht.json").success(function(data, status) {
+     $http.get("data/anls1-ht.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -669,7 +669,7 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
             angular.extend($scope.geojson, {
                 ht: {
-                    name: '2kmhargano',
+                    name: '2kmhargaterendah',
                     type: 'geoJSON',
                     data: data,
                     style:
