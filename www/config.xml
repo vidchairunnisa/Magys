@@ -61,8 +61,8 @@
     
     <!-- Define app icon for each platform. -->
     <platform name="wp8">
-        <icon src="res/icon/windows-phone/icon-48.png" width="99" height="99" gap:platform="wp8"/>
-        <icon src="res/icon/windows-phone/icon-72.png" width="159" height="159" gap:platform="wp8"/>
+        <icon src="res/icon/windows-phone/icon-48.png" width="99" height="99" platform="wp8"/>
+        <icon src="res/icon/windows-phone/icon-72.png" width="159" height="159" platform="wp8"/>
         <splash src="res/screen/windows-phone/SplashScreenImage.jpg" width="768" height="1280" gap:platform="wp8"/>
     </platform> 
     
@@ -78,20 +78,20 @@
     <!-- you can use any density that exists in the Android project -->
 
         <icon src="icon.png" />
-        <icon src="res/icon/android/magys-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
-        <icon src="res/icon/android/magys-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
-        <icon src="res/icon/android/magys-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
-        <icon src="res/icon/android/magys-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+        <icon src="res/icon/android/magys-36-ldpi.png"   platform="android"    density="ldpi" />
+        <icon src="res/icon/android/magys-48-mdpi.png"   platform="android"    density="mdpi" />
+        <icon src="res/icon/android/magys-72-hdpi.png"   platform="android"    density="hdpi" />
+        <icon src="res/icon/android/magys-96-xhdpi.png"  platform="android"    density="xhdpi" />
        
-        <splash src="res/screen/android/splash-land-hdpi.png" gap:qualifier="land-hdpi"/>
-        <splash src="res/screen/android/splash-land-ldpi.png" gap:qualifier="land-ldpi"/>
-        <splash src="res/screen/android/splash-land-mdpi.png" gap:qualifier="land-mdpi"/>
-        <splash src="res/screen/android/splash-land-xhdpi.png" gap:qualifier="land-xhdpi"/>
+        <splash src="res/screen/android/splash-land-hdpi.png" qualifier="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" qualifier="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" qualifier="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" qualifier="land-xhdpi"/>
 
-        <splash src="res/screen/android/splash-port-hdpi.png" gap:qualifier="port-hdpi"/>
-        <splash src="res/screen/android/splash-port-ldpi.png" gap:qualifier="port-ldpi"/>
-        <splash src="res/screen/android/splash-port-mdpi.png" gap:qualifier="port-mdpi"/>
-        <splash src="res/screen/android/splash-port-xhdpi.png" gap:qualifier="port-xhdpi"/>
+        <splash src="res/screen/android/splash-port-hdpi.png" qualifier="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" qualifier="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" qualifier="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" qualifier="port-xhdpi"/>
     </platform>
     
     <!-- <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" /> -->
