@@ -80,7 +80,7 @@ app.config(function($urlRouterProvider,$ionicConfigProvider){
 	$ionicConfigProvider.tabs.position('bottom');
 });
 
-app.run(function($rootScope,$ionicNavBarDelegate,$ionicSideMenuDelegate,$ionicPopover,$location,$http,$ionicPlatform){
+app.run(function($rootScope,$ionicNavBarDelegate,$ionicSideMenuDelegate,$location,$http,$ionicPlatform){
 
 	$rootScope.toHome = function() {
 		$location.path('/');
@@ -94,22 +94,6 @@ app.run(function($rootScope,$ionicNavBarDelegate,$ionicSideMenuDelegate,$ionicPo
 		$ionicNavBarDelegate.back();
 	};
 
-	$ionicPopover.fromTemplateUrl('popover-account.html', {
-		scope: $rootScope,
-	}).then(function(popover) {
-	    $rootScope.popover = popover;
-	});
-
-	$rootScope.openPopover = function($event) {
-    	$rootScope.popover.show($event);
-	};
-	$rootScope.closePopover = function() {
-	    $rootScope.popover.hide();
-	};
-
-    $rootScope.$on('$destroy', function() {
-        $rootSscope.popover.remove();
-    });
 });
 
 app.controller('panelCtrl',function($scope){
@@ -267,8 +251,8 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
 
      $scope.datalama = {},
 
-    
-     $http.get("data/data.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/postgis_geojson_indekos.php").success(function(data, status) {
+     //$http.get("data/data.json").success(function(data, status) {
      //$http.get("hos").success(function(data, status) {
               
         var myIcon = {
@@ -465,11 +449,11 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
         var filtered = [];
         var min = parseInt(rangeInfo.userMin);
         var max = parseInt(rangeInfo.userMax);
-        // If time is with the range
+
         console.log(rangeInfo);
         if (rangeInfo != 0) {
             angular.forEach(items, function(item) {
-                // console.log(item.properties);
+
                 if( parseInt(item.properties.hargabulan) >= min && parseInt(item.properties.hargabulan) <= max ) {
                     filtered.push(item);
                 }
@@ -490,12 +474,10 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
     return function( items, rangeInfo ) {
         var filteredj = [];
         var min = parseInt(rangeInfo.jarakMin);
-        var max = parseInt(rangeInfo.jarakMax);
-        // If time is with the range
+        var max = parseInt(rangeInfo.ja
         console.log(rangeInfo);
         if (rangeInfo != 0) {
             angular.forEach(items, function(item) {
-                // console.log(item.properties);
                 if (item.properties.hubdist >= min && item.properties.hubdist <= max ) {
                     filteredj.push(item);
                 }
@@ -598,7 +580,9 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
                 geojson:{}
         });
 
-    $http.get("data/anls1-dl.json").success(function(data, status) {
+   
+    $http.get("http://192.168.173.1:8080/getpg/anls1-dl.php").success(function(data, status) { 
+    //$http.get("data/anls1-dl.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -628,7 +612,8 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
         });
     
-    $http.get("data/anls1-hn.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/anls1-hn.php").success(function(data, status) {
+    //$http.get("data/anls1-hn.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -658,7 +643,8 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
         });
 
-     $http.get("data/anls1-ht.json").success(function(data, status) {
+     $http.get("http://192.168.173.1:8080/getpg/anls1-ht.php").success(function(data, status) {
+     //$http.get("data/anls1-ht.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -688,7 +674,8 @@ app.controller("analisis-satuCtrl", [ '$scope','$http', 'leafletData', function(
 
         });
 
-    $http.get("data/anls1-htg.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/anls1-htg.php").success(function(data, status) {
+    //$http.get("data/anls1-htg.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -771,8 +758,9 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
                 geojson: {}
         });
-
-    $http.get("data/anls2-nh.json").success(function(data, status) {
+   
+    $http.get("http://192.168.173.1:8080/getpg/anls2-nh.php").success(function(data, status) {
+    //$http.get("data/anls2-nh.json").success(function(data, status) {
                  //$http.get("hos").success(function(data, status) {
                           
                     var myIcon = L.icon({  
@@ -802,7 +790,8 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
         });
     
-    $http.get("data/anls2-hl.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/anls2-hl.php").success(function(data, status) {
+    //$http.get("data/anls2-hl.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -832,7 +821,8 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
         });
 
-    $http.get("data/anls2-hm.json").success(function(data, status) {
+     $http.get("http://192.168.173.1:8080/getpg/anls2-hm.php").success(function(data, status) {
+    //$http.get("data/anls2-hm.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -862,7 +852,8 @@ app.controller("analisis-duaCtrl", [ '$scope','$http','leafletData', function($s
 
         });
 
-    $http.get("data/anls2-hh.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/anls2-hh.php").success(function(data, status) { 
+    //$http.get("data/anls2-hh.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -945,7 +936,8 @@ app.controller("analisis-tigaCtrl", [ '$scope', '$http', 'leafletData', function
                 geojson: {}
             });
 
-    $http.get("data/anls3-tlf.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/anls3-tlf.php").success(function(data, status) { 
+    //$http.get("data/anls3-tlf.json").success(function(data, status) {
                  //$http.get("hos").success(function(data, status) {
                           
                     var myIcon = L.icon({  
@@ -976,7 +968,8 @@ app.controller("analisis-tigaCtrl", [ '$scope', '$http', 'leafletData', function
 
         });
     
-    $http.get("data/anls3-lf.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/anls3-lf.php").success(function(data, status) { 
+    //$http.get("data/anls3-lf.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -1059,8 +1052,9 @@ app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', functio
                 },
                 geojson: {}
             });
-
-    $http.get("data/anls4-pka.json").success(function(data, status) {
+    
+    $http.get("http://192.168.173.1:8080/getpg/anls4-pka.php").success(function(data, status) {
+    //$http.get("data/anls4-pka.json").success(function(data, status) {
                  //$http.get("hos").success(function(data, status) {
                           
                     var myIcon = L.icon({  
@@ -1081,7 +1075,7 @@ app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', functio
                                 onEachFeature: function(feature, layer) {
 
                                     layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias +
-                                        '</td></tr><tr><th scope="row" width="30"><b>TYPE</b></th><th width="8">:</th><td>' + feature.properties.kos + 
+                                        //'</td></tr><tr><th scope="row" width="30"><b>TYPE</b></th><th width="8">:</th><td>' + feature.properties.kos + 
                                         '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
                                         '</td></tr><tr><th scope="row" width="30"><b>FACILITIES</b></th><th width="8">:</th><td>' + feature.properties.fasilitas +
                                         '</td></tr><tr><th scope="row" width="30"><b>DISTANCE</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
@@ -1091,8 +1085,9 @@ app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', functio
                     });
 
         });
-    
-    $http.get("data/anls4-paa.json").success(function(data, status) {
+
+     $http.get("http://192.168.173.1:8080/getpg/anls4-paa.php").success(function(data, status) { 
+    //$http.get("data/anls4-paa.json").success(function(data, status) {
          //$http.get("hos").success(function(data, status) {
                   
             var myIcon = L.icon({  
@@ -1113,7 +1108,7 @@ app.controller("analisis-empatCtrl", [ '$scope', '$http', 'leafletData', functio
                         onEachFeature: function(feature, layer) {
 
                             layer.bindPopup('<table><tr><th scope="row" width="20"><b>NAME</b></th><th width="8">:</th><td>' + feature.properties.alias + 
-                                '</td></tr><tr><th scope="row" width="30"><b>TYPE</b></th><th width="8">:</th><td>' + feature.properties.kos +
+                                //'</td></tr><tr><th scope="row" width="30"><b>TYPE</b></th><th width="8">:</th><td>' + feature.properties.kos +
                                 '</td></tr><tr><th scope="row" width="30"><b>PRICE</b></th><th width="8">:</th><td>' + feature.properties.hargalabel+
                                 '</td></tr><tr><th scope="row" width="30"><b>FACILITIES</b></th><th width="8">:</th><td>' + feature.properties.fasilitas +
                                 '</td></tr><tr><th scope="row" width="30"><b>DISTANCE</b></th><th width="8">:</th><td>' + feature.properties.hubdist.toFixed(2) + ' KM' +
@@ -1192,7 +1187,8 @@ app.controller("analisis-limaCtrl", [ '$scope', '$http', 'leafletData', function
                 },
                 geojson: {}
             });
-    $http.get("data/anls5-his.json").success(function(data, status) {
+    $http.get("http://192.168.173.1:8080/getpg/anls5-his.php").success(function(data, status) {
+    //$http.get("data/anls5-his.json").success(function(data, status) {
                  //$http.get("hos").success(function(data, status) {
                           
                     var myIcon = {
@@ -1393,8 +1389,9 @@ app.controller("analisis-tujuhCtrl", [ '$scope', '$http', 'leafletData', functio
                 },
                 geojson: {}
             });
-
-            $http.get("data/anls7-dapur.json").success(function(data, status) {
+            
+            $http.get("http://192.168.173.1:8080/getpg/anls7-dapur.php").success(function(data, status) {
+            //$http.get("data/anls7-dapur.json").success(function(data, status) {
           
             var myIcon = {
                             
@@ -1513,8 +1510,9 @@ app.controller("analisis-delapanCtrl", [ '$scope', '$http', 'leafletData', funct
                 },
                 geojson: {}
             });
-
-        $http.get("data/anls8-wifi.json").success(function(data, status) {
+        
+            $http.get("http://192.168.173.1:8080/getpg/anls8-wifi.php").success(function(data, status) {
+       // $http.get("data/anls8-wifi.json").success(function(data, status) {
           
             var myIcon = {
                             
@@ -1630,8 +1628,8 @@ app.controller("analisis-sembilanCtrl", [ '$scope', '$http', 'leafletData', func
                 geojson: {}
             });
 
-
-            $http.get("data/anls9-ac.json").success(function(data, status) {
+            $http.get("http://192.168.173.1:8080/getpg/anls9-ac.php").success(function(data, status) {
+            //$http.get("data/anls9-ac.json").success(function(data, status) {
           
                 var myIcon = {
                                 
