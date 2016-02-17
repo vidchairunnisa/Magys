@@ -474,7 +474,7 @@ app.controller("homeCtrl", [ '$scope', '$http', 'leafletData', '$filter', '$ioni
     return function( items, rangeInfo ) {
         var filteredj = [];
         var min = parseInt(rangeInfo.jarakMin);
-        var max = parseInt(rangeInfo.ja
+        var max = parseInt(rangeInfo.jarakMax);
         console.log(rangeInfo);
         if (rangeInfo != 0) {
             angular.forEach(items, function(item) {
